@@ -1,0 +1,17 @@
+---
+services:
+  torbrowser:
+    image: tor-browser-docker-ng:latest
+    container_name: tor-browser-docker-ng
+    privileged: true
+    tty: true
+    restart: always
+    environment:
+      SHELL: "/bin/bash"
+      DISPLAY: ":0"
+      RES: "1680x1050x32"
+    ports:
+      - '8080:8080'
+      - '5900:5900'
+#    volumes:
+#      -  ./storage:/home/browseruser
